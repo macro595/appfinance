@@ -1,0 +1,20 @@
+<!--
+
+    Copyright (c) 2012-2014, chzh.xiao technology Co., Ltd.
+
+    All rights reserved.
+
+-->
+
+<!--
+    Description: Bean 验证配置。
+    Version: 1.0.0.0, Jul 5, 2016
+    Author: Liang Ding
+-->
+<constraint-mappings 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://jboss.org/xml/ns/javax/validation/mapping
+                    http://jboss.org/xml/ns/javax/validation/mapping/validation-mapping-1.0.xsd"
+    xmlns="http://jboss.org/xml/ns/javax/validation/mapping">
+	
+</constraint-mappings>

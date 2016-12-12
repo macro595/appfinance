@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (c) 2012-2014, chzh.xiao technology Co., Ltd. All rights reserved. -->
+
+<!-- Description: MyBatis mysql generated configuration。 Version: 1.0.0.0, 
+	Jul 5, 2016 Author: Liang Ding -->
+
+<!DOCTYPE generatorConfiguration
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<properties resource="env.properties" />
+
+	<context id="eflowTables" targetRuntime="MyBatis3">
+		<plugin type="com.yuanxin.framework.mybatis.MySQLPaginationPlugin"></plugin>
+
+		<plugin type="com.yuanxin.framework.mybatis.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+
+		<plugin type="com.yuanxin.framework.mybatis.SerializablePlugin" />
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="false" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="${jdbc.url}" userId="${jdbc.username}" password="${jdbc.password}">
+		</jdbcConnection>
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<javaModelGenerator targetPackage="com.xp.app.appfinance.entity.gen"
+			targetProject="src/main/java/">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.xp.app.appfinance.dao.gen.mysql"
+			targetProject="src/main/resources/">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.xp.app.appfinance.dao.gen" targetProject="src/main/java/">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<table tableName="T_ACCOUNT_BALANCE_SHEET" domainObjectName="AccountBalanceSheet">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="T_FINANCE_SUJECT" domainObjectName="FinanceSuject">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="V_TW_ACCOUNT" domainObjectName="TwAccount">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="v_shouzhi_shiji" domainObjectName="ShouzhiShiji">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="v_report_profit_budge_statement"
+			domainObjectName="ReportBudgeStatement">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="v_profit_budge_statement" domainObjectName="BudgeStatement">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="T_ACCOUNT_BALANCE_ITEM" domainObjectName="AccountBalanceItem">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+		<table tableName="T_CONTRACT_INFO" domainObjectName="ContractInfo">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="T_CONTRACT_ITEM" domainObjectName="ContractItem">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="T_YUSUAN" domainObjectName="YuSuan">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+		<table tableName="t_subject_relation_account" domainObjectName="SubjectRelationAccount">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="V_SUBJECT_BALANCEITEM" domainObjectName="SubjectBalanceitem">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="T_YUSUAN_DETIAL" domainObjectName="YusuanDetial">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="v_report_caiwushouzhi" domainObjectName="ReportCaiwushouzhi">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+
+		<table tableName="T_SUJECT_DICTIONARY" domainObjectName="SubjectDictionary">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="T_INVESTMENT_BUDGET" domainObjectName="InvestmentBudget">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="T_BUSINESS_ACTIVITY_BUDGET" domainObjectName="BABudget">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="T_BUSINESS_ACTIVITY_BUDGET_DETIAL"
+			domainObjectName="BABudgetDetail">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>
+
+		<table tableName="T_PRODUCTION_DATAPREDICTION_DETAIL"
+			domainObjectName="PDDetail">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>		
+		
+		<table tableName="T_PRODUCTION_DATAPREDICTION"
+			domainObjectName="ProducData">
+			<generatedKey column="ID" sqlStatement="select uuid_short()"
+				identity="false" />
+			<columnOverride column="ID" property="id" javaType="String" />
+		</table>			
+	</context>
+</generatorConfiguration>

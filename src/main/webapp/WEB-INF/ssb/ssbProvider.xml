@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ssb="http://code.alibabatech.com/schema/dubbo"    
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 调用超时时间 -->
+    <ssb:provider timeout="60000" />
+    <!-- 声明需要发布的服务接口 -->
+    <!-- 登陆接口 -->
+    <ssb:service interface="com.xp.app.appfinance.service.IContractInfoService" ref="contractInfoService" />
+</beans>

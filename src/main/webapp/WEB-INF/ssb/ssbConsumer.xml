@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ssb="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+        ">
+
+    <!-- 启动时SSB依赖检查 -->
+    <ssb:consumer check="false" />
+    <!-- 远程服务代理实例，可以和本地 bean 一样使用，需要使用请打开注解-->
+    <!-- test服务 -->
+	 <!-- <dubbo:reference id="sendEmailApi" interface="com.hnair.opcnet.api.email.SendEmailApi" version="1.0.0" check="false" protocol="dubbo"/> -->
+</beans>
